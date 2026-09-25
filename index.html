@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6a8bd">
+  <title>A Little Birthday Surprise 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating decorations -->
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <main class="app">
+
+    <!-- SCREEN 1: Passcode -->
+<section class="screen active opening-screen" id="screen1">
+
+  <!-- Decorative elements -->
+  <div class="opening-sparkle sparkle-1">✦</div>
+  <div class="opening-sparkle sparkle-2">✧</div>
+  <div class="opening-sparkle sparkle-3">♡</div>
+  <div class="opening-sparkle sparkle-4">✦</div>
+
+  <div class="opening-card">
+
+    <div class="mini-label">
+      ✿ A LITTLE SURPRISE FOR YOU ✿
+    </div>
+
+    <div class="bunny-wrap">
+      <div class="bunny-glow"></div>
+      <div class="bunny">🐰</div>
+    </div>
+
+    <p class="opening-small">
+      Hey Shreesti...
+    </p>
+
+    <h1 class="script opening-title">
+      There's something<br>
+      waiting for you 💗
+    </h1>
+
+    <p class="opening-subtitle">
+      But first, you need to enter<br>
+      the secret code...
+    </p>
+
+    <div class="pin-area">
+
+      <div class="pin-display" id="pinDisplay">
+        <span>•</span>
+        <span>•</span>
+        <span>•</span>
+        <span>•</span>
+      </div>
+
+      <div class="keypad">
+
+        <button data-key="1">1</button>
+        <button data-key="2">2</button>
+        <button data-key="3">3</button>
+
+        <button data-key="4">4</button>
+        <button data-key="5">5</button>
+        <button data-key="6">6</button>
+
+        <button data-key="7">7</button>
+        <button data-key="8">8</button>
+        <button data-key="9">9</button>
+
+        <button data-key="clear">♡</button>
+        <button data-key="0">0</button>
+        <button data-key="back">⌫</button>
+
+      </div>
+
+      <p class="error" id="pinError"></p>
+
+      <button class="next-btn opening-btn" id="unlockBtn">
+        Open my surprise ✨
+      </button>
+
+    </div>
+
+    <p class="opening-footer">
+      made especially for you ♡
+    </p>
+
+  </div>
+
+</section>
+
+    <!-- SCREEN 2: Main photo -->
+    <section class="screen" id="screen2">
+      <div class="corner-label">Made with love 💌</div>
+
+      <div class="photo-card hero-card">
+        <div class="photo-frame">
+          <img src="images/photo1.jpg" alt="Your photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-placeholder">YOUR PHOTO<br><small>Replace photo1.jpg</small></div>
+        </div>
+      </div>
+
+      <h2 class="script big">Happy Birthday,<br><span id="name1">Your Name</span> 💗</h2>
+      <p class="message">Today is all about celebrating you and all the happiness you bring into the world.</p>
+      <button class="next-btn" data-next="3">Next →</button>
+    </section>
+
+    <!-- SCREEN 3: Balloons -->
+    <!-- SCREEN 3: Interactive Balloons -->
+<section class="screen balloon-screen" id="screen3">
+
+  <div class="balloon-decoration balloon-decor-1">♡</div>
+  <div class="balloon-decoration balloon-decor-2">✦</div>
+  <div class="balloon-decoration balloon-decor-3">♡</div>
+
+  <div class="balloon-top-label">
+    ✿ ONE MORE LITTLE SURPRISE ✿
+  </div>
+
+  <h2 class="script balloon-title">
+    Pop the balloons!
+  </h2>
+
+  <p class="balloon-subtitle">
+    There are four little surprises waiting inside. 💗
+    <br>
+    Tap each balloon to find them.
+  </p>
+
+  <div class="balloon-progress" id="balloonProgress">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="interactive-balloons">
+
+    <button class="balloon balloon-one"
+            data-message="You deserve a day full of smiles! 😊">
+      <span class="balloon-string"></span>
+      <span class="balloon-shape">🎈</span>
+    </button>
+
+    <button class="balloon balloon-two"
+            data-message="May this year bring you beautiful memories. ✨">
+      <span class="balloon-string"></span>
+      <span class="balloon-shape">🎈</span>
+    </button>
+
+    <button class="balloon balloon-three"
+            data-message="Keep shining exactly the way you do. 💗">
+      <span class="balloon-string"></span>
+      <span class="balloon-shape">🎈</span>
+    </button>
+
+    <button class="balloon balloon-four"
+            data-message="And now... one more surprise is waiting! 🎁">
+      <span class="balloon-string"></span>
+      <span class="balloon-shape">🎈</span>
+    </button>
+
+  </div>
+
+  <div class="balloon-message-box">
+    <p class="reveal-message" id="balloonMessage">
+      Tap a balloon ✨
+    </p>
+  </div>
+
+  <button class="next-btn hidden" id="balloonNext">
+    Continue → 
+  </button>
+
+  <p class="balloon-footer">
+    four balloons • four little surprises ♡
+  </p>
+
+</section>
+
+    <!-- SCREEN 4: Memory/photo -->
+    <section class="screen" id="screen4">
+      <h2 class="script big">A little memory 💕</h2>
+
+      <div class="film">
+        <div class="film-strip">• • • • • • • • • • • • • • •</div>
+        <div class="memory-photo">
+          <img src="images/photo2.jpg" alt="Memory photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-placeholder">YOUR MEMORY PHOTO<br><small>Replace photo2.jpg</small></div>
+        </div>
+        <div class="film-strip">• • • • • • • • • • • • • • •</div>
+      </div>
+
+      <p class="message">Some moments become memories that are worth keeping forever. 💗</p>
+      <button class="next-btn" data-next="5">Next →</button>
+    </section>
+
+    <!-- SCREEN 5: Cake -->
+    <!-- SCREEN 5: Make a Wish -->
+<section class="screen cake-screen" id="screen5">
+
+  <div class="cake-decor cake-decor-1">✦</div>
+  <div class="cake-decor cake-decor-2">♡</div>
+  <div class="cake-decor cake-decor-3">✧</div>
+
+  <div class="cake-label">
+    ✿ ONE LAST LITTLE THING ✿
+  </div>
+
+  <h2 class="script cake-title">
+    Make a wish...
+  </h2>
+
+  <p class="cake-subtitle">
+    Close your eyes, make a little wish,
+    <br>
+    and tap the flame. ✨
+  </p>
+
+  <div class="cake-scene">
+
+    <div class="cake-sparkle sparkle-left">✦</div>
+    <div class="cake-sparkle sparkle-right">✧</div>
+
+    <!-- Candle -->
+    <button class="cake-flame" id="flame" aria-label="Blow out candle">
+      <span class="flame-glow"></span>
+      🔥
+    </button>
+
+    <div class="cake-candle">
+      <div class="candle-stripe"></div>
+      <div class="candle-stripe second"></div>
+    </div>
+
+    <!-- Cake -->
+    <div class="cake-top-layer">
+
+      <div class="cake-cream cream-1"></div>
+      <div class="cake-cream cream-2"></div>
+      <div class="cake-cream cream-3"></div>
+
+      <div class="cake-cherry cherry-1">●</div>
+      <div class="cake-cherry cherry-2">●</div>
+      <div class="cake-cherry cherry-3">●</div>
+
+    </div>
+
+    <div class="cake-body">
+
+      <div class="cake-drip drip-1"></div>
+      <div class="cake-drip drip-2"></div>
+      <div class="cake-drip drip-3"></div>
+
+      <div class="cake-decoration-line"></div>
+
+      <div class="cake-dot dot-1"></div>
+      <div class="cake-dot dot-2"></div>
+      <div class="cake-dot dot-3"></div>
+      <div class="cake-dot dot-4"></div>
+
+    </div>
+
+    <div class="cake-plate"></div>
+
+  </div>
+
+  <p class="wish-message" id="cakeMessage"></p>
+
+  <button class="next-btn hidden" id="cakeNext">
+    One last thing → 
+  </button>
+
+  <p class="cake-footer">
+    may all your wishes come true ♡
+  </p>
+
+</section>
+
+    <!-- SCREEN 6: Final -->
+<section class="screen final-screen" id="screen6">
+
+  <!-- Keep this ID because script.js uses it -->
+  <div class="confetti" id="confetti"></div>
+
+  <!-- Decorative elements -->
+  <div class="final-decor final-heart-1">♡</div>
+  <div class="final-decor final-heart-2">♥</div>
+  <div class="final-decor final-star-1">✦</div>
+  <div class="final-decor final-star-2">✧</div>
+
+  <div class="final-content">
+
+    <div class="final-small-label">
+      ✿ YOU MADE IT ✿
+    </div>
+
+    <div class="final-gift">
+      🎁
+    </div>
+
+    <p class="final-intro">
+      And finally...
+    </p>
+
+    <h2 class="script final-title">
+      Happy Birthday,
+      <br>
+      <span id="name2">Shreesti</span>! 💗
+    </h2>
+
+    <!-- Final photo -->
+    <div class="final-photo-wrapper">
+
+      <div class="final-photo-frame">
+
+        <img
+          src="images/photo3.jpg"
+          alt="Final photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+
+        <div class="final-photo-placeholder">
+          YOUR FINAL PHOTO
+          <small>Replace photo3.jpg</small>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- IMPORTANT:
+         Keep finalMessage ID because script.js uses it -->
+    <div class="final-message-area">
+
+      <p class="final-message-label">
+        One very important message:
+      </p>
+
+      <h3 class="final-punchline" id="finalMessage">
+        dgabazzi krna chor do XD
+      </h3>
+
+    </div>
+
+    <div class="final-divider">
+      <span>♡</span>
+      <i></i>
+      <span>♡</span>
+    </div>
+
+    <p class="final-closing">
+      Okay, that's it... maybe. 😂
+      <br>
+      Have the happiest birthday! ✨
+    </p>
+
+    <!-- IMPORTANT:
+         Keep restart ID because script.js uses it -->
+    <button class="restart replay-btn" id="restart">
+      ↻ Start again
+    </button>
+
+  </div>
+
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
